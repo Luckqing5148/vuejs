@@ -6,6 +6,8 @@ import index from "./scripts/components/index.vue"
 import home from "./scripts/components/home.vue"
 import sort from "./scripts/components/sort.vue"
 import cart from "./scripts/components/cart.vue"
+import detail from "./scripts/components/detail.vue"
+import list from "./scripts/components/list.vue"
 import my from "./scripts/components/my.vue"
 const routes = [{
     path: '/',
@@ -23,9 +25,16 @@ const routes = [{
     {
         path: '/my',
         component: my
-    }
-    ]
-}]
+    }]
+    },
+    {
+        path: '/detail/:id',
+        component: detail
+    },
+    {
+        path: '/list',
+        component: list
+    }]
 
 const router = new VueRouter({
     routes:routes // （缩写）相当于 routes: routes

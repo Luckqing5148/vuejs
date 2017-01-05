@@ -9,7 +9,9 @@
 				</div>
 				
 				</li>
+				<!-- <router-link :to="'/cart'"> -->
 				<li class="yo-ico">&#xe611;</li>
+				<!-- <router-link> -->
 			</ul>
 		</header>
 		<section>
@@ -56,7 +58,9 @@
 			<div>
 				<h1>商家推荐</h1>
 				<ol>
-					<li v-for="item in list">
+				 <router-link :to="'/detail/'+item.id" v-for="item in list">
+                    <li >
+                   
 					<div>
 						<img src="/images/images/IMG_4731_03.png">
 					</div>
@@ -67,7 +71,11 @@
 						<b v-text="item.sales"></b>
 						<b class="price" v-text="item.oldprice"></b>
 					</div>
-					</li>		
+					
+					</li>
+					 </router-link>
+                
+							
 				</ol>
 			</div>
 		</section>

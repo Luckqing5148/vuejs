@@ -21,7 +21,7 @@
           @include flex();
           @include flexbox();
           @include justify-content();
-              @include align-items();
+          @include align-items();
               div{
                 height: .26rem;
                 width: 3rem;
