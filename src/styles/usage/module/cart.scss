@@ -1,0 +1,15 @@
+@charset "utf-8";
+@import "./common.scss";
+.cart{
+	@include flexbox();
+	@include flex-direction(column);
+	height: 100%;
+	header{
+		height: .44rem;
+		background: $base-color;
+	}
+	section{
+		@include flex();
+		width: 100%;
+	}
+}

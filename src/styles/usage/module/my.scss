@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import "./common.scss";
+.my{
+	@include flexbox();
+	@include flex-direction(column);
+	height: 100%;
+	header{
+		height: .44rem;
+		background:#2dac64;
+		ul{
+			@include flexbox();
+			height:.44rem;
+			font-size: .17rem;
+			color:#fff;
+			line-height: .44rem;
+			li{
+				@include flex();
+				text-align: center;
+			}
+			li:nth-child(2){
+				font-size: .21rem;
+				@include flex(2);
+			}
+		}
+	}
+	section{
+		@include flex();
+		width:100%;
+		background: #f8f8f8;
+		overflow: scroll;
+		ul{
+			margin-top: .07rem;
+			text-align: center;
+			background:#fff;
+			@include flexbox();
+			li{
+				@include flex();
+				.my_head{
+					width:.63rem;
+					margin-top: .05rem;
+				}
+				.erweima{
+						height:.42rem;
+						margin-top:.16rem;
+					}
+			}
+			li:nth-child(2){
+				@include flex(2);
+				position: relative;
+				ul{
+					@include flexbox();
+					@include flex-direction(column);
+					width:100%;
+					li{
+						width:100%;
+						text-align: left;
+						font-size:.14rem;
+						h2{
+							font-size: .18rem;
+						}
+						i{
+							margin-left:.3rem;
+						}
+					}
+					li:nth-child(2){
+						color:#ff8306;
+					}
+				}
+				.dao{
+					position: absolute;
+					top:0.06rem;
+					height:.30rem;
+				}
+			}
+		}
+
+		ol{
+			@include flexbox();
+			@include flex-direction(column);
+			background: #fff;
+			margin-top: .17rem;
+			li{
+				margin-left: .2rem;
+				height:.4rem;
+				line-height: .4rem;
+				position: relative;
+				@include border(0 0 1px 0,e2e2e2,solid)
+				img{
+					width:.25rem;
+					margin-right: .1rem;
+				}
+				b{
+					display: inline-block;
+    				width: 1.7rem;
+    				span{
+    					position: inherit ;
+    				}
+				}
+				span{
+					display: inline-block;
+					width:.3rem;
+					text-align: right;
+					position: absolute;
+					right: .4rem;
+					color:#ff8a13;
+				}
+				i{
+					position: absolute;
+					right:.2rem;
+				}
+				p{
+					display: inline-block;
+					color:#00a83b;
+					position: absolute;
+					right:.6rem;
+				}
+			}
+			li:nth-child(3){
+				@include border(0 0 0 0);
+			}
+			.te{
+				@include border(0 0 0 0);
+				height:.17rem;
+				margin:0;
+				background:#f8f8f8;
+			}
+			.zhong{
+				@include border(0 0 0 0);
+			}
+			li:last-child{
+				@include border(0 0 0 0);
+			}
+		}
+	}
+}
