@@ -23,8 +23,7 @@ const routes = [{
     {
         path: '/my',
         component: my
-    }
-    ]
+    }]
 }]
 
 const router = new VueRouter({
