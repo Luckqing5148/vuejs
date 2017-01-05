@@ -9,6 +9,8 @@ import cart from "./scripts/components/cart.vue"
 import detail from "./scripts/components/detail.vue"
 import list from "./scripts/components/list.vue"
 import my from "./scripts/components/my.vue"
+import login from "./scripts/components/login.vue"
+import register from "./scripts/components/register.vue"
 const routes = [{
     path: '/',
     component: index,
@@ -23,11 +25,6 @@ const routes = [{
         component: cart
     },
     {
-        path: '/my',
-        component: my
-    }]
-    },
-    {
         path: '/detail/:id',
         component: detail
     },
@@ -35,6 +32,15 @@ const routes = [{
         path: '/list',
         component: list
     }]
+        path: '/login',
+        component: login
+        
+    },{
+        path:'/register',
+        component:register
+    }
+    ]
+}]
 
 const router = new VueRouter({
     routes:routes // （缩写）相当于 routes: routes

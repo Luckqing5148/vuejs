@@ -6,6 +6,14 @@ $base-color:#2dac64;
   url('/images/fonts/iconfont.ttf?t=1483442756300') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('/images/fonts/iconfont.svg?t=1483442756300#iconfont') format('svg'); /* iOS 4.1- */
 }
+@font-face {
+  font-family: 'yofont';
+  src: url('/images/fonts/register.eot');
+  src: url('/images/fonts/register.eot?#iefix') format('embedded-opentype'),
+  url('/images/fonts/register.woff') format('woff'),
+  url('/images/fonts/register.ttf') format('truetype'),
+  url('/images/fonts/register.svg#iconfont') format('svg');
+}
 a{
 	color:black;
 }

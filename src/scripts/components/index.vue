@@ -35,7 +35,7 @@
             title: '购物车'
           },
           {
-            router: '/my',
+            router: '/login',
             ico: '&#xe609;',
             title: '我的'
           }
