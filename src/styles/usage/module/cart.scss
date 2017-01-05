@@ -1,15 +1,35 @@
 @charset "utf-8";
 @import "./common.scss";
 .cart{
+	font-size: .12rem;
 	@include flexbox();
 	@include flex-direction(column);
 	height: 100%;
 	header{
 		height: .44rem;
-		background: $base-color;
+		background:#2dac64;
+		ul{
+			@include flexbox();
+			height:.44rem;
+			font-size: .17rem;
+			color:#fff;
+			line-height: .44rem;
+			li{
+				@include flex();
+				// text-align: right;
+				text-align: center;
+			}
+			li:nth-child(2){
+				font-size: .21rem;
+				@include flex(2);
+			}
+		}
 	}
+		
 	section{
 		@include flex();
-		width: 100%;
+		width:100%;
+		background: #f1f1f1;
 	}
+	
 }

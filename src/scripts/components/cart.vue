@@ -1,10 +1,17 @@
 <template>
-	<div class="cart">
+	<div class="cart" id="cart">
 		<header>
-			<b>购物车</b>
+			<ul>
+				<li></li>
+				<li>购物车</li>
+				<li>编辑</li>
+			</ul>
 		</header>
 		<section>
-			
+			<div class="res">
+				<input type="checkbox">
+				
+			</div>
 		</section>
 	</div>
 </template>
