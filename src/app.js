@@ -7,6 +7,8 @@ import home from "./scripts/components/home.vue"
 import sort from "./scripts/components/sort.vue"
 import cart from "./scripts/components/cart.vue"
 import my from "./scripts/components/my.vue"
+import login from "./scripts/components/login.vue"
+import register from "./scripts/components/register.vue"
 const routes = [{
     path: '/',
     component: index,
@@ -21,8 +23,12 @@ const routes = [{
         component: cart
     },
     {
-        path: '/my',
-        component: my
+        path: '/login',
+        component: login
+        
+    },{
+        path:'/register',
+        component:register
     }
     ]
 }]
