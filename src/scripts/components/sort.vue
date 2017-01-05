@@ -6,7 +6,8 @@
 	</header>
 	<section>
 		<ol>
-			<li v-for='item in list'>
+			<router-link :to="'/list'">
+				<li v-for='item in list'>
 				<div>
 					<p>
 						<b>{{item.sort}}</b>
@@ -14,23 +15,31 @@
 					</p>
 				</div>
 			</li>
-			
+			</router-link>	
 		</ol>
 	</section>
 </div>
 </template>
 <script>
+	var common = require('../utils/util.common.js');
 	module.exports = {
-    data: function () {
+    data:function () {
       return {
 		list:[]
 		}
     },
     mounted:function(){
-			fetch('/api/list').then(response => response.json()).then(res => {
+			fetch('/api/list').then(response => response.json())
+			.then(res => {
+				var that = this
+        		that.list = res;
 				console.log(res)
-				this.list = res;
-			})
+				common.isAllLoaded('#index-scroll ol', function () {
+          		common.scroll(that);
+        		})
+			});
+		
 		}
+   
   }
 </script>
