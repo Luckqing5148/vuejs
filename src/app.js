@@ -11,37 +11,38 @@ import list from "./scripts/components/list.vue"
 import my from "./scripts/components/my.vue"
 import login from "./scripts/components/login.vue"
 import register from "./scripts/components/register.vue"
-const routes = [{
-    path: '/',
-    component: index,
-    children: [{
-        path: '/',
-        component: home
-    },{
-        path: '/sort',
-        component: sort
-    },{
-        path: '/cart',
-        component: cart
-    },
-    {
-        path: '/detail/:id',
-        component: detail
-    },
-    {
-        path: '/list',
-        component: list
-    }]
-        path: '/login',
-        component: login
-        
-    },{
-        path:'/register',
-        component:register
-    }
-    ]
-}]
 
+
+
+        const routes = [{
+            path: '/',
+            component: index,
+            children: [{
+                path: '/',
+                component: home
+            },{
+                path: '/sort',
+                component: sort
+            },{
+                path: '/cart',
+                component: cart
+            },
+            {
+                path: '/login',
+                component: login
+                
+            },{
+                path:'/register',
+                component:register
+            }
+            ]},{
+                path:'/detail/:id',
+                component:detail
+            },
+            {
+                path:'/list',
+                component:list
+            }]
 const router = new VueRouter({
     routes:routes // （缩写）相当于 routes: routes
 })
