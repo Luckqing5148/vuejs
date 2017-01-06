@@ -33,12 +33,8 @@
 			.then(res => {
 				var that = this
         		that.list = res;
-				console.log(res)
-				common.isAllLoaded('#index-scroll ol', function () {
-          		common.scroll(that);
-        		})
+				console.log(res)			
 			});
-		
 		}
    
   }

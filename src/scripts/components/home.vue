@@ -62,7 +62,7 @@
                     <li >
                    
 					<div>
-						<img src="/images/images/IMG_4731_03.png">
+						<img :src="item.imgsrc">
 					</div>
 					<div>
 						<h2 v-text="item.title"></h2>
@@ -73,18 +73,13 @@
 					</div>
 					
 					</li>
-					 </router-link>
-                
-							
+					 </router-link>		
 				</ol>
 			</div>
 		</section>
 	</div>
 </template>
-
-
 <script>
-
   module.exports = {
     data: function () {
       return {

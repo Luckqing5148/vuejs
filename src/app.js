@@ -11,9 +11,6 @@ import list from "./scripts/components/list.vue"
 import my from "./scripts/components/my.vue"
 import login from "./scripts/components/login.vue"
 import register from "./scripts/components/register.vue"
-
-
-
         const routes = [{
             path: '/',
             component: index,
