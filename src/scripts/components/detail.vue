@@ -26,10 +26,10 @@
 				<img :src="item.imgsrc" alt="">
 			</div>
 		</section>
-		<footer>
+		<footer v-for="item in list" v-if="$route.params.id==item.id">
 			
 				<b>
-					<router-link :to="'/cart'">
+					<router-link :to="'/cart/'+item.id">
 						加入购物车
 					</router-link>	
 				</b>

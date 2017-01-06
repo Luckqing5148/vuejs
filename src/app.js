@@ -21,7 +21,7 @@ import register from "./scripts/components/register.vue"
                 path: '/sort',
                 component: sort
             },{
-                path: '/cart',
+                path: '/cart/:id',
                 component: cart
             },
             {

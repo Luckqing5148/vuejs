@@ -30,7 +30,7 @@
             title: '分类'
           },
            {
-            router: '/cart',
+            router: '/cart/:id',
             ico: '&#xe611;',
             title: '购物车'
           },

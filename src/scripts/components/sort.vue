@@ -2,11 +2,14 @@
 	<div class="sort" id="sort">
 	<header>
 		<b>分类</b>
-		<i class="yo-ico">&#xe617;</i>
+		<router-link :to="'/'">
+			<i class="yo-ico">&#xe617;</i>
+		</router-link>
+		
 	</header>
 	<section>
 		<ol>
-			<router-link v-for='item in list' :to="'/list'+item.sortid" v-if="item.sortid!=''">
+			<router-link v-for='item in list' :to="'/list/'+item.sortid" v-if="item.sortid!=''">
 				<li>
 				<div>
 					<p>

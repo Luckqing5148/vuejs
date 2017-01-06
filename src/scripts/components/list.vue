@@ -5,7 +5,7 @@
       <i><img src="/images/images/return1.png"></i>
     </router-link>
     
-    <b>生鲜</b>
+    <b v-for="item in list" v-if="$route.params.sortid==item.produceid">{{item.sort}}</b>
   </header>
   <section>
    <div id="index-scroll">
@@ -15,9 +15,9 @@
                 <span>下拉刷新...</span>
               </div>
              <ol>
-                    <li v-for="item in list">
+                    <li v-for="item in list" v-if="$route.params.sortid==item.produceid">
                     <div>
-                      <img src="/images/images/IMG_4731_03.png">
+                      <img :src="item.imgsrc">
                     </div>
                     <div>
                       <h2 v-text="item.title"></h2>
@@ -38,11 +38,11 @@
 </div>
 </template>
 <script>
-// var common = require('../utils/util.common.js');
+var common = require('../utils/util.common.js');
   module.exports = {
     data: function () {
       return {
-    list:[],
+      list:[]
       }
     },
 

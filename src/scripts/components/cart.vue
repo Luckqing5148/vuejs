@@ -8,18 +8,18 @@
 			</ul>
 		</header>
 		<section>
-			<div class="res">
+			<div class="res" v-for="item in list" v-if="$route.params.id==item.id">
 				<div>
 					<div class="gx">
 						<input type="checkbox" id="checkbox01" />
 						<label for="checkbox01"></label>
 					</div>
 				</div>
-				<img src="/images/images/IMG_4731_03.png">
+				<img :src="item.imgsrc">
 				<div>
-					<h2>舜皇山土猪合家欢生鲜套餐288元/盒</h2>
-					<h3>生鲜套餐</h3>
-					<span>￥288</span>
+					<h2>{{item.title}}</h2>
+					<h3>{{item.sort}}</h3>
+					<span>{{item.nowprice}}</span>
 					<div>
 						<input type="button" value="-">
 						<input type="text" value="1">
@@ -39,3 +39,20 @@
 		</section>
 	</div>
 </template>
+
+<script>
+var common = require('../utils/util.common.js');
+  module.exports = {
+    data: function () {
+      return {
+      list:[]
+      }
+    },
+
+    mounted:function(){
+      fetch('/api/list').then(response => response.json()).then(res => {
+            this.list = res;
+      })
+    }
+  }
+</script>
