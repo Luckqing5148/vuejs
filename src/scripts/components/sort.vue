@@ -6,8 +6,8 @@
 	</header>
 	<section>
 		<ol>
-			<router-link :to="'/list'">
-				<li v-for='item in list'>
+			<router-link v-for='item in list' :to="'/list'+item.sortid" v-if="item.sortid!=''">
+				<li>
 				<div>
 					<p>
 						<b>{{item.sort}}</b>
@@ -21,7 +21,6 @@
 </div>
 </template>
 <script>
-	var common = require('../utils/util.common.js');
 	module.exports = {
     data:function () {
       return {

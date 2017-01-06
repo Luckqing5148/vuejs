@@ -37,7 +37,7 @@ import register from "./scripts/components/register.vue"
                 component:detail
             },
             {
-                path:'/list',
+                path:'/list/:sortid',
                 component:list
             }]
 const router = new VueRouter({
