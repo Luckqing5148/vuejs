@@ -1,5 +1,5 @@
 var common = {
-  /*render: function (str) {
+  render: function (str) {
     var body = document.body;
     body.innerHTML = str + body.innerHTML;
   },
@@ -34,7 +34,7 @@ var common = {
               }, 3000); // 我这里设置的是500毫秒就扫描一次，可以自己调整
           }
       }
-  },*/
+  },
 
   scroll: function (that) {
     var myScroll = new IScroll('#index-scroll', {

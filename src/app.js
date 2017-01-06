@@ -1,7 +1,6 @@
-require('./styles/usage/app.scss')
+    require('./styles/usage/app.scss')
 var layout = require('./scripts/tpls/layout.html')
 var common = require('./scripts/utils/util.common.js')
-common.render(layout)
 import index from "./scripts/components/index.vue"
 import home from "./scripts/components/home.vue"
 import sort from "./scripts/components/sort.vue"
@@ -11,6 +10,7 @@ import list from "./scripts/components/list.vue"
 import my from "./scripts/components/my.vue"
 import login from "./scripts/components/login.vue"
 import register from "./scripts/components/register.vue"
+common.render(layout)
 
 const routes = [{
     path: '/',
@@ -32,8 +32,10 @@ const routes = [{
     },{
         path:'/register',
         component:register
-    }
-    ]},{
+    },{
+        path:'/my',
+        component:my
+    }]},{
         path:'/detail/:id',
         component:detail
     },

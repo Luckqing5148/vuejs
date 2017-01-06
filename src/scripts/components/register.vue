@@ -2,7 +2,12 @@
 	<div class="register" id="register">
 		<header>
 			<ul>
-				<li><img src="/images/images/return1.png" alt=""></li>
+				
+				<li>
+					<router-link :to="'/login'">
+						<img src="/images/images/return1.png" alt="">
+					</router-link>
+				</li>
 				<li>注册</li>
 				<li></li>
 			</ul>

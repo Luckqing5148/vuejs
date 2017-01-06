@@ -25,7 +25,9 @@
 		</section>
 		<div class="footer">
 			<div class="reg">
+				<router-link :to="'/my'">
 				<input type="button" value="登录">
+				</router-link>
 			</div> 
 			<div class="zc">
 				<router-link :to="'/register'">

@@ -21,9 +21,9 @@
 					<h3>生鲜套餐</h3>
 					<span>￥288</span>
 					<div>
-						<input type="button" value="-">
-						<input type="text" value="1">
-						<input type="button" value="+">
+						<input type="button" value="-" id="jian">
+						<input type="text" value="1" id="val">
+						<input type="button" value="+" id="jia" @click="jia()">
 					</div>
 				</div>
 			</div>
