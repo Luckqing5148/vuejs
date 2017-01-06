@@ -22,7 +22,7 @@ const routes = [{
         path: '/sort',
         component: sort
     },{
-        path: '/cart',
+        path: '/cart/:id',
         component: cart
     },
     {
@@ -40,7 +40,7 @@ const routes = [{
         component:detail
     },
     {
-        path:'/list',
+        path:'/list/:sortid',
         component:list
     }]
 const router = new VueRouter({

@@ -41,7 +41,6 @@
           text-align: center;
           height: .35rem;
           line-height: .35rem;
-          // display: none;
         }
         .head img {
           width: .14rem;
@@ -53,7 +52,7 @@
           -webkit-transition: transform 150ms;
         }
         .hide{
-          // display: none;
+          display: none;
         }
         .up {
           transform: rotate(360deg) !important;
@@ -62,8 +61,7 @@
         .foot {
           text-align: center;
           height: .35rem;
-          line-height: .35rem;
-        }
+          line-height: .35rem;        }
         .foot img {
           width: .14rem;
           height: .14rem;
@@ -74,7 +72,7 @@
           -webkit-transition: transform 150ms;
         }
         .foot{
-          // display: none;
+          display: none;
         }
         .down {
           transform: rotate(180deg) !important;

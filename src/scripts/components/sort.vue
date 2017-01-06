@@ -2,12 +2,15 @@
 	<div class="sort" id="sort">
 	<header>
 		<b>分类</b>
-		<i class="yo-ico">&#xe617;</i>
+		<router-link :to="'/'">
+			<i class="yo-ico">&#xe617;</i>
+		</router-link>
+		
 	</header>
 	<section>
 		<ol>
-			<router-link :to="'/list'">
-				<li v-for='item in list'>
+			<router-link v-for='item in list' :to="'/list/'+item.sortid" v-if="item.sortid!=''">
+				<li>
 				<div>
 					<p>
 						<b>{{item.sort}}</b>
@@ -21,7 +24,6 @@
 </div>
 </template>
 <script>
-	var common = require('../utils/util.common.js');
 	module.exports = {
     data:function () {
       return {
@@ -33,12 +35,8 @@
 			.then(res => {
 				var that = this
         		that.list = res;
-				console.log(res)
-				common.isAllLoaded('#index-scroll ol', function () {
-          		common.scroll(that);
-        		})
+				console.log(res)			
 			});
-		
 		}
    
   }
