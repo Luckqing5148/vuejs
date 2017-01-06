@@ -5,7 +5,7 @@
 				<router-link :to="'/'">
 					<li class="yo-ico">&#xe617;</li>
 				</router-link>
-				<li>{{$route.params.id}}</li>
+				<li>详情页</li>
 				<router-link :to="'/cart'">
 				<li class="yo-ico">&#xe611;</li>
 				</router-link>
