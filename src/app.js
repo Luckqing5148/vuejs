@@ -40,6 +40,7 @@ import register from "./scripts/components/register.vue"
                 path:'/list/:sortid',
                 component:list
             }]
+
 const router = new VueRouter({
     routes:routes // （缩写）相当于 routes: routes
 })

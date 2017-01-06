@@ -7,13 +7,14 @@
 	header{
 		height: .44rem;
 		background: $base-color;
-		@include flexbox();
 		b,i{
 			color:#fff; 
 			font-size:.18rem;
 		}
 		b{
-			margin: auto;
+			display: block;
+			text-align: center;
+			line-height: .44rem;
 		}
 		i{
 			position: absolute;
@@ -26,16 +27,65 @@
 			}
 	}
 	section{
-		@include flex();
 		width: 100%;
-		// overflow: hidden;
-		background: pink;
+		overflow: scroll;
+		background: #fff;
+		#index-swiper {
+		    height: 100%;
+	    }
+		.scroll-container {
+		    // padding-bottom: 0.8rem;
+		    // height: 100%;
+		}
+        .head {
+          text-align: center;
+          height: .35rem;
+          line-height: .35rem;
+          // display: none;
+        }
+        .head img {
+          width: .14rem;
+          height: .14rem;
+          display: inline-block;
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms;
+        }
+        .hide{
+          // display: none;
+        }
+        .up {
+          transform: rotate(360deg) !important;
+          -webkit-transform: rotate(360deg) !important;
+        }
+        .foot {
+          text-align: center;
+          height: .35rem;
+          line-height: .35rem;
+        }
+        .foot img {
+          width: .14rem;
+          height: .14rem;
+          display: inline-block;
+          /*transform: rotate(0deg);*/
+          /*-webkit-transform: rotate(0deg);*/
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms;
+        }
+        .foot{
+          // display: none;
+        }
+        .down {
+          transform: rotate(180deg) !important;
+          -webkit-transform: rotate(180deg) !important;
+        }
         ol{
    			height: 100%;
    			width: 100%;
-   			@include flexbox();
+   		    @include flexbox();
    			@include flex-direction(column);
-			// overflow: scroll;
+			overflow: scroll;
    				li{
    					@include flex();
    					@include flexbox();
@@ -86,55 +136,7 @@
    			}
        
 		}
-		 #index-swiper {
-          height: 100%;
-        }
-        .scroll-container {
-          padding-bottom: 0.8rem;
-          height: 100%;
-        }
-        .head {
-          text-align: center;
-          height: .35rem;
-          line-height: .35rem;
-        }
-        .head img {
-          width: .14rem;
-          height: .14rem;
-          display: inline-block;
-          transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
-          transition: transform 150ms;
-          -webkit-transition: transform 150ms;
-        }
-        .head.hide {
-          display: none;
-        }
-        .up {
-          transform: rotate(360deg) !important;
-          -webkit-transform: rotate(360deg) !important;
-        }
-        .foot {
-          text-align: center;
-          height: .35rem;
-          line-height: .35rem;
-        }
-        .foot img {
-          width: .14rem;
-          height: .14rem;
-          display: inline-block;
-          /*transform: rotate(0deg);*/
-          /*-webkit-transform: rotate(0deg);*/
-          transition: transform 150ms;
-          -webkit-transition: transform 150ms;
-        }
-        .foot.hide {
-          display: none;
-        }
-        .down {
-          transform: rotate(180deg) !important;
-          -webkit-transform: rotate(180deg) !important;
-        }
+		
 	>*{
 		width: 100%;
 	}	

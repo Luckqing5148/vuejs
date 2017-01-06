@@ -8,9 +8,9 @@
     <b>生鲜</b>
   </header>
   <section>
-   <div class="swiper-slide" id="index-scroll">
+   <div id="index-scroll">
             <div class="scroll-container">
-              <div class="head hide">
+              <div class="head">
                 <img src="/images/images/arrow.png" width="40" height="40"/>
                 <span>下拉刷新...</span>
               </div>
@@ -28,7 +28,7 @@
                     </div>
                     </li>   
                   </ol>
-              <div class="foot hide">
+              <div class="foot">
                 <img src="/images/images/arrow.png" width="40" height="40"/>
                 <span>上拉加载更多...</span>
               </div>
@@ -38,7 +38,7 @@
 </div>
 </template>
 <script>
-var common = require('../utils/util.common.js');
+// var common = require('../utils/util.common.js');
   module.exports = {
     data: function () {
       return {

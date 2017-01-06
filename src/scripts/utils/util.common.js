@@ -76,7 +76,7 @@ var common = {
                 myScroll.scrollTo(0, -scrollHeight);
                 head.removeClass('up');
                 head.attr('src', '/images/images/arrow.png');
-            }, 3000);
+            }, 500);
         }
 
         var maxY = this.maxScrollY - this.y;
@@ -97,7 +97,7 @@ var common = {
               myScroll.refresh();
 
               //myScroll.scrollTo(0, self.y + scrollHeight);
-              myScroll.scrollTo(0, self.maxScrollY - 60);
+              myScroll.scrollTo(0, self.maxScrollY - 35);
 
               foot.removeClass('down');
               foot.attr('src', '/images/images/arrow.png');
